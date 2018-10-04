@@ -12,7 +12,7 @@ public class Paddle extends Sprite implements Commons {
 	
 	public Paddle() {
 		
-		ImageIcon ii = new ImageIcon("resources/paddle.png");
+		ImageIcon ii = new ImageIcon("src/resources/paddle.png");
 		image = ii.getImage();
 		
 		i_width = image.getWidth(null);
@@ -52,7 +52,10 @@ public class Paddle extends Sprite implements Commons {
 		
 		int key = e.getKeyCode();
 		
-		if ((key == KeyEvent.VK_LEFT) || (key == KeyEvent.VK_RIGHT))
+		if (key == KeyEvent.VK_LEFT)
+			dx = 0;
+		
+		if (key == KeyEvent.VK_RIGHT)
 			dx = 0;
 	}
 }
